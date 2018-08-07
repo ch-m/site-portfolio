@@ -1,3 +1,64 @@
+* {
+  box-sizing: border-box; }
+
 body {
   background: rgba(10, 134, 192, 0.966);
-  color: white; }
+  background: url(../img/fundo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(10, 134, 192, 0.5);
+    z-index: -1; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.h-grande,
+  h2.h-grande,
+  h3.h-grande {
+    font-size: 6rem; }
+  h1.h-pequeno,
+  h2.h-pequeno,
+  h3.h-pequeno {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(11, 141, 202, 0.5); }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.secundaria-nome {
+  color: #eece1a; }
+
+main {
+  padding: 4rem;
+  height: 100%;
+  overflow: hidden; }
+  main h1 {
+    margin-top: 20vh; }
+  main .icones {
+    margin-top: 1rem; }
+    main .icones a {
+      padding: 0.4rem; }
+      main .icones a:hover {
+        color: #eece1a;
+        transition: all 0.5s ease-in; }
