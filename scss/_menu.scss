@@ -1,0 +1,32 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 53px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-lines {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    @include easeOut;
+  }
+
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-lines {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(0px, -1.3px);
+      }
+      &:nth-child(3) {
+        opacity: 0;
+      }
+    }
+  }
+}
