@@ -27,7 +27,7 @@ h3 {
   &.h-pequeno {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primaria, 2), 0.5);
+    //  background: rgba(lighten($primaria, 2), 0.5);
   }
 }
 
@@ -47,7 +47,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  padding: 6rem;
   height: 100%;
 
   overflow: hidden;

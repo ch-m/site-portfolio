@@ -1,7 +1,8 @@
-$primaria: rgba(10, 134, 192, 0.966);
+$primaria: #333333;
 $secundaria: #eece1a;
 $mostar-imagem: true;
 $imagem-fundo: url(../img/fundo.jpg);
+$retrato: url(../img/retrato.jpg);
 $opacidade-fundo: 0.5;
 
 @mixin easeOut {
