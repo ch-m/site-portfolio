@@ -26,3 +26,24 @@ $opacidade-fundo: 0.5;
     }
   }
 }
+
+@mixin mediaPequeno {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMedio {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaGrande {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaeExtra {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
