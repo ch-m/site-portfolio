@@ -1,21 +1,20 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
 }
 body {
   background: $primaria;
-  @include fundo;
-  color: white;
+  color: set-cor-texo($primaria);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  &#conteiner-img {
+    @include fundo;
+  }
 }
-
-// H..
 
 h1,
 h2,
@@ -50,12 +49,15 @@ header {
 
 main {
   padding: 6rem;
-  height: 100%;
-
+  //funçao para calcular a posiçao do footer
+  min-height: calc(100vh - 60px);
   overflow: hidden;
-  h1 {
-    margin-top: 20vh;
+  &#home {
+    h1 {
+      margin-top: 20vh;
+    }
   }
+
   .icones {
     margin-top: 1rem;
 
@@ -69,3 +71,97 @@ main {
     }
   }
 }
+
+.grid-conteiner {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "sobre-img sobre sobre"
+    "projeto-1 projeto-2 projeto-3";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sobre-img {
+  grid-area: sobre-img;
+  border: solid 3px $secundaria;
+  border-radius: 50%;
+  margin: auto;
+}
+.sobre {
+  grid-area: sobre;
+}
+
+.projeto {
+  background: lighten($primaria, 5);
+  padding: 0.5rem;
+  border-bottom: 5px solid $secundaria;
+}
+
+//grid conteinder trabalho.html
+.grid-conteiner-trabalho {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    width: 100%;
+    border: 3px solid white;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secundaria;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secundaria;
+    color: set-text-color($secundaria);
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($primaria, 50);
+  color: white;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primaria, 50);
+  color: #333;
+}
+
+.conteiner-contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  div {
+    font-size: 2rem;
+    border: 3px white solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secundaria;
+      color: set-cor-texo($secundaria);
+      span {
+        color: set-cor-texo($secundaria);
+      }
+    }
+  }
+}
+
+.main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primaria, 10);
+  color: set-cor-texo($primaria);
+  height: 60px;
+}
+@import "mobile";

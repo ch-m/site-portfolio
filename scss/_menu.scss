@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: white;
+    background: set-cor-texo($primaria);
     @include easeOut;
   }
 
@@ -108,7 +108,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: white;
+    color: set-cor-texo($primaria);
     text-decoration: none;
     &:hover {
       color: $secundaria;

@@ -6,7 +6,7 @@ const navItens = document.querySelectorAll(".nav-item");
 const divFoto = document.querySelector(".foto");
 
 let mostrarMenu = false;
-let tempoAnimacao = 5000;
+
 
 menuBtn.addEventListener("click", toggleMenu);
 

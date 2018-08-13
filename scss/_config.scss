@@ -1,9 +1,9 @@
-$primaria: #333333;
+$primaria: #444;
 $secundaria: #eece1a;
 $mostar-imagem: true;
 $imagem-fundo: url(../img/fundo.jpg);
 $retrato: url(../img/retrato.jpg);
-$opacidade-fundo: 0.5;
+$opacidade-fundo: 0.9;
 
 @mixin easeOut {
   transition: all 0.5s ease-in;
@@ -27,13 +27,21 @@ $opacidade-fundo: 0.5;
   }
 }
 
+@function set-cor-texo($color) {
+  @if (lightness($color) >40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 @mixin mediaPequeno {
   @media screen and (max-width: 500px) {
     @content;
   }
 }
 @mixin mediaMedio {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     @content;
   }
 }
