@@ -3,7 +3,7 @@ const menu = document.querySelector(".menu");
 const menuBrading = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItens = document.querySelectorAll(".nav-item");
-const divFoto = document.querySelector(".foto");
+const divFoto = document.querySelector(".overlay-img");
 
 let mostrarMenu = false;
 

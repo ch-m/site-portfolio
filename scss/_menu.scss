@@ -37,7 +37,9 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  
+  
+  
   visibility: hidden;
   &.show {
     visibility: visible;
@@ -45,6 +47,7 @@
 
   &-branding,
   &-nav {
+    
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -55,9 +58,9 @@
     overflow: hidden;
   }
   &-nav {
+    background: rgba(55,55,55, 0.9);
     margin: 0;
     padding: 0;
-    background: darken($primaria, 5);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -66,35 +69,36 @@
     }
   }
   &-branding {
+    background: rgba(68,68,68, 0.9);
     margin: 0;
     padding: 0;
-    background: $primaria;
     list-style: none;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
     &.show {
       transform: translate3d(0, 0, 0);
     }
-    & .foto {
-      width: 250px;
-      height: 250px;
-      background: url("../img/retrato.jpg");
-      border: solid 3px #eece1a;
-      border-radius: 50%;
+     
+      
+      .overlay-img {
       transform: translate(-600px, 0);
+      
       @include easeOut;
       &.show {
         transform: translate(0, 0);
         transition-delay: 0.5s;
+        
       }
     }
+    
   }
 
   .nav-item {
     transform: translate(600px, 0);
     @include easeOut;
     &.show {
-      transform: translate3d(0, 0, 0);
+      transform: translate(0, 0);
+      transition-delay: 0.5s;
     }
     &.atual > a {
       color: $secundaria;
@@ -116,8 +120,4 @@
   }
 }
 
-@for $x from 1 to 4 {
-  .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
-  }
-}
+ 

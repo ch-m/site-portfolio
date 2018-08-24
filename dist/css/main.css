@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -38,39 +37,35 @@
     height: 100vh;
     overflow: hidden; }
   .menu-nav {
+    background: rgba(55, 55, 55, 0.9);
     margin: 0;
     padding: 0;
-    background: #373737;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-in; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
+    background: rgba(68, 68, 68, 0.9);
     margin: 0;
     padding: 0;
-    background: #444;
     list-style: none;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-in; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .foto {
-      width: 250px;
-      height: 250px;
-      background: url("../img/retrato.jpg");
-      border: solid 3px #eece1a;
-      border-radius: 50%;
+    .menu-branding .overlay-img {
       transform: translate(-600px, 0);
       transition: all 0.5s ease-in; }
-      .menu-branding .foto.show {
+      .menu-branding .overlay-img.show {
         transform: translate(0, 0);
         transition-delay: 0.5s; }
   .menu .nav-item {
     transform: translate(600px, 0);
     transition: all 0.5s ease-in; }
     .menu .nav-item.show {
-      transform: translate3d(0, 0, 0); }
+      transform: translate(0, 0);
+      transition-delay: 0.5s; }
     .menu .nav-item.atual > a {
       color: #eece1a; }
   .menu .nav-link {
@@ -84,15 +79,6 @@
     text-decoration: none; }
     .menu .nav-link:hover {
       color: #eece1a; }
-
-.nav-item:nth-child(1) {
-  transition-delay: 0.1s; }
-
-.nav-item:nth-child(2) {
-  transition-delay: 0.2s; }
-
-.nav-item:nth-child(3) {
-  transition-delay: 0.3s; }
 
 * {
   box-sizing: border-box; }
@@ -115,7 +101,7 @@ body {
       right: 0;
       height: 100%;
       width: 100%;
-      background: rgba(68, 68, 68, 0.9);
+      background: rgba(68, 68, 68, 0.5);
       z-index: -1; }
 
 h1,
@@ -170,6 +156,12 @@ main {
   border: solid 3px #eece1a;
   border-radius: 50%;
   margin: auto; }
+
+.overlay-img {
+  border: solid 3px #eece1a;
+  border-radius: 50%;
+  margin: auto;
+  opacity: 1 !important; }
 
 .sobre {
   grid-area: sobre; }
@@ -237,21 +229,16 @@ main {
 @media screen and (max-width: 500px) {
   main {
     padding: 2rem; }
+    main#sobre {
+      align-items: center;
+      text-align: center; }
     main #home h1 {
       margin-top: 10vh; }
     main .h-grande {
       margin-top: 1rem;
       font-size: 5rem; }
   .grid-conteiner-trabalho {
-    grid-template-columns: 1fr; } }
-
-@media screen and (min-width: 501px) and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .h-grande {
-      line-height: 1;
-      margin-bottom: 1rem; }
+    grid-template-columns: 1fr; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -261,16 +248,46 @@ main {
     div.menu-branding.show {
       transform: translate(0, 0); }
   .menu-nav {
-    height: 75vh;
+    height: 60vh;
     transform: translate(-100%, 0);
     font-size: 24px; }
   .menu-branding {
-    height: 25vh;
-    transform: translate(100%, 0); }
-    .menu-branding .foto {
-      background: url("../img/fundo.jpg");
-      width: 150px;
-      height: 150px; }
+    height: 45vh;
+    transform: translate(100%, 0);
+    padding-top: 10px; }
+  .h-grande, .h-pequeno, .icones {
+    text-align: center; }
+  .grid-conteiner {
+    grid-template-areas: "sobre-img" "sobre" "projeto-1" "projeto-2" "projeto-3";
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center; } }
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .h-grande {
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main#projetos .h-grande {
+      margin-bottom: 2rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate(0, 0); }
+  .menu-nav {
+    height: 60vh;
+    transform: translate(-100%, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 45vh;
+    transform: translate(100%, 0);
+    padding-top: 10px; }
   .grid-conteiner {
     grid-template-areas: "sobre-img" "sobre" "projeto-1" "projeto-2" "projeto-3";
     grid-template-columns: 1fr; }
