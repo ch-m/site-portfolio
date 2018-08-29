@@ -5,10 +5,16 @@ const menuNav = document.querySelector(".menu-nav");
 const navItens = document.querySelectorAll(".nav-item");
 const divFoto = document.querySelector(".overlay-img");
 
+
+
+
+
 let mostrarMenu = false;
 
 
 menuBtn.addEventListener("click", toggleMenu);
+
+
 
 function toggleMenu() {
   if (!mostrarMenu) {
