@@ -5,6 +5,9 @@
       align-items: center;
       text-align: center;
     }
+    &#projetos{
+      text-align: center
+    }
     padding: 2rem;
     #home h1 {
       margin-top: 10vh;
@@ -46,9 +49,8 @@
     grid-template-areas:
       "sobre-img"
       "sobre"
-      "projeto-1"
-      "projeto-2"
-      "projeto-3";
+      "exp"
+      "projeto-1";
     grid-template-columns: 1fr;
     align-items: center;
     text-align: center;
@@ -96,9 +98,8 @@
     grid-template-areas:
       "sobre-img"
       "sobre"
-      "projeto-1"
-      "projeto-2"
-      "projeto-3";
+      "exp"
+      "projeto-1";
     grid-template-columns: 1fr;
   }
 

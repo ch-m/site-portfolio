@@ -6,13 +6,6 @@ const span = document.getElementsByClassName("close")[0];
 const icon = document.querySelector(".btn-projetos");
 
 
-/*img.onclick = function(){
-
-    modal.style.display = "block";
-    modalImg.src = this.src;
-}
-
-*/
 function mostrarModal(){
 
     modal.style.display = "block";
@@ -46,7 +39,7 @@ btn_projetos.addEventListener("click", toggleimg);
 
 function toggleimg(){
 
-    console.log(imagem_btn_projetos);
+    
   
   
     if(imagem_btn_projetos[0].classList.contains("mostrar-img")){

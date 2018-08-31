@@ -74,14 +74,31 @@ main {
 }
 
 .grid-conteiner {
+  div{
+    min-width: 300px;
+  }
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
     "sobre-img sobre sobre"
+    "exp exp exp"
     "projeto-1 projeto-2 projeto-3";
   grid-template-columns: repeat(3, 1fr);
 }
-
+.tecs{
+  font-size: 50px;
+  i{
+    margin-top: 25px;
+    @include easeOut;
+    &:hover{
+      color: $secundaria;
+    }
+  }
+}
+#experiencia-comp{
+  grid-area: exp;
+  color: $secundaria;
+}
 .sobre-img {
   grid-area: sobre-img;
   border: solid 3px $secundaria;
@@ -108,10 +125,13 @@ main {
 //grid conteinder trabalho.html
 .grid-conteiner-trabalho {
   display: grid;
+  
   grid-gap: 0.7rem;
+  
   grid-template-columns: repeat(3, 1fr);
   img {
     width: 100%;
+    height: 250px;
     border: 3px solid white;
     &:hover {
       opacity: 0.5;
@@ -164,6 +184,7 @@ main {
     }
   }
 }
+
 
 .main-footer {
   text-align: center;
