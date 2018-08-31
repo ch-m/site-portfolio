@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://ch-m.github.io/site-portfolio",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "ch-m",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^1.2.0",
     "node-sass": "^4.9.2"
   }
 }
