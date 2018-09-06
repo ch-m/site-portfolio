@@ -83,6 +83,8 @@
       .overlay-img {
       transform: translate(-600px, 0);
       
+        height: 40vh;
+      
       @include easeOut;
       &.show {
         transform: translate(0, 0);
